@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android_custom_intent_list">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".Wallpaper"
+            android:icon="@drawable/ic_launcher"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/library_wallpaper">
+            <intent-filter>
+                <action android:name="com.android_custom_intent_list.intent.action.WALLPAPER_FROM_LIBRARY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity-alias
+            android:icon="@drawable/ic_menu_default_wallpaper"
+            android:label="@string/default_wallpaper"
+            android:name=".WallpaperDefault"
+            android:targetActivity=".Wallpaper">
+            <!-- XML__ <intent-filter> is mandatory otherwise wont work in API-15 -->
+            <intent-filter>
+                <action android:name="com.android_custom_intent_list.intent.action.WALLPAPER_DEFAULT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:icon="@drawable/clear"
+            android:label="@string/none_wallpaper"
+            android:name=".WallpaperNone"
+            android:targetActivity=".Wallpaper">
+            <intent-filter>
+                <action android:name="com.android_custom_intent_list.intent.action.WALLPAPER_NONE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:icon="@drawable/attach_gallery"
+            android:label="@string/gallery_wallpaper"
+            android:name=".WallpaperGallery"
+            android:targetActivity=".Wallpaper">
+            <intent-filter>
+                <action android:name="com.android_custom_intent_list.intent.action.WALLPAPER_FROM_GALLERY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:icon="@drawable/ic_menu_solid_color_wallpaper"
+            android:label="@string/color_wallpaper"
+            android:name=".WallpaperColor"
+            android:targetActivity=".Wallpaper">
+            <intent-filter>
+                <action android:name="com.android_custom_intent_list.intent.action.WALLPAPER_FROM_SOLID_COLOR"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+    </application>
+</manifest>

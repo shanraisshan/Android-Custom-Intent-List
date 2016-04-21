@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Android-Custom-Intent-List</string>
+    <string name="btn">Launch custom intent list</string>
+    <string name="default_wallpaper">Default</string>
+    <string name="none_wallpaper">No Wallpaper</string>
+    <string name="library_wallpaper">Wallpaper Library</string>
+    <string name="gallery_wallpaper">Gallery</string>
+    <string name="color_wallpaper">Solid Color</string>
+</resources>
