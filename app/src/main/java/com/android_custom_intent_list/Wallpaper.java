@@ -5,6 +5,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
+/**
+ * Shayan Rais (http://shanraisshan.com)
+ * created on 4/21/2016.
+ */
 public class Wallpaper extends AppCompatActivity {
 
     @Override

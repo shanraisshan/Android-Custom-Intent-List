@@ -1,7 +1,8 @@
 package com.android_custom_intent_list;
 
 /**
- * Created by Shayan.Rais on 4/21/2016.
+ * Shayan Rais (http://shanraisshan.com)
+ * created on 4/21/2016.
  */
 public class Constants {
     //if you change here, change also in AndroidManifest.xml
